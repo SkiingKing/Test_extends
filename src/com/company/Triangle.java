@@ -11,6 +11,8 @@ public class Triangle extends Figure {
         this.z = z;
     }
 
+    Triangle t = new Triangle(5, 7, 9);
+
     public int getX() {
         return x;
     }
@@ -24,6 +26,16 @@ public class Triangle extends Figure {
     }
 
     @Override
+    public String toString() {
+        return "Triangle" + x + y + z;
+    }
+
+    @Override
+    public int hashCode() {
+        return t.hashCode() + 1;
+    }
+
+    @Override
     public double getPerimeter() {
         return x + z + y;
     }
@@ -32,5 +44,10 @@ public class Triangle extends Figure {
     public double getArea() {
 
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

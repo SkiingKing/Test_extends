@@ -16,6 +16,8 @@ public final class Square extends Figure {
         this.x = triangle.getX();
     }
 
+    Square s = new Square(10);
+
     public RavnoStotoniyTriangle getTriangle() {
         RavnoStotoniyTriangle triangle = new RavnoStotoniyTriangle(x);
         return triangle;
@@ -29,5 +31,21 @@ public final class Square extends Figure {
     @Override
     public double getArea() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "square" + x;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return 100 * s.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
